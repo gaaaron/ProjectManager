@@ -1,0 +1,35 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="modal.cancel()" style="outline: none;">&times;</button>
+    <h3 class="modal-title" ng-show="modal.edit">Edit work log</h3>
+    <h3 class="modal-title" ng-hide="modal.edit">Create new work log</h3>
+</div>
+<div class="modal-body">
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="startTime">Start time</label>
+            <div class="col-sm-3" uib-timepicker ng-model="modal.formData.startTime" id="startTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="endTime">End time</label>
+            <div class="col-sm-3" uib-timepicker ng-model="modal.formData.endTime" id="endTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-sm-3"  for="projdescription">Description</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="projdescription" ng-model="modal.formData.description" placeholder="Enter description" />
+            </div>
+        </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button class="btn btn-danger pull-left" ng-show="modal.edit" ng-click="modal.deleteWorkTimeLog()">Delete</button>
+
+    <button type="submit" class="btn btn-info" ng-show="modal.edit" ng-click="modal.editWorkTimeLog()">Save</button>
+    <button type="submit" class="btn btn-info" ng-hide="modal.edit" ng-click="modal.addWorkTimeLog()">Create</button>
+    <button class="btn btn-default" ng-click="modal.cancel()">Cancel</button>
+</div>

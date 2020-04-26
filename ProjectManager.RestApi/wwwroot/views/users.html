@@ -1,0 +1,31 @@
+<div class="jumbotron text-center">
+    <h1>Team members</h1>
+
+    <div class="container-fluid">
+        <table class="table text-left">
+            <thead>
+            <tr>
+                <th></th>
+                <th>User name</th>
+                <th>Full name</th>
+                <th>Projects</th>
+            </tr>
+            </thead>
+            <tbody ng-repeat="item in users">
+            <tr>
+                <td>
+                    <span class="glyphicon glyphicon-remove pointerCursor" ng-click="deleteUser(item)"></span>
+                </td>
+                <td>{{item.userName}}</td>
+                <td>{{item.name}}</td>
+                <td>
+                    <div ng-repeat="proj in item.projectNames" style="display: inline-block;margin-right: 5px;">
+                        <span class="label label-info">{{proj}}</span>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>

@@ -1,0 +1,20 @@
+<md-event-calendar
+		auto-height="20"
+		ng-model="selected"
+		md-events="events"
+		md-event-click="eventClicked($selectedEvent)"
+		md-create-event-click="createClicked($date)"
+		md-label="title"
+		md-create-disabled="false"
+>
+	<md-event-calendar-header>
+		<div flex></div>
+		<md-event-calendar-prev></md-event-calendar-prev>
+		<md-event-calendar-title></md-event-calendar-title>
+		<md-event-calendar-next></md-event-calendar-next>
+		<div flex layout="row">
+			<span flex></span>
+			<md-event-calendar-today></md-event-calendar-today>
+		</div>
+	</md-event-calendar-header>
+</md-event-calendar>

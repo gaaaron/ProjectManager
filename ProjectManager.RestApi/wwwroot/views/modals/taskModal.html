@@ -1,0 +1,41 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="modal.cancel()" style="outline: none;">&times;</button>
+    <h3 class="modal-title" ng-show="modal.edit">Edit task</h3>
+    <h3 class="modal-title" ng-hide="modal.edit">Create new task</h3>
+</div>
+<div class="modal-body">
+
+    <form class="form-horizontal">
+
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="taskname">Task name</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="taskname" ng-model="modal.formData.name" placeholder="Enter task name">
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3"  for="taskdescription">Description</label>
+            <div class="col-sm-9">
+                <input type="text" class="form-control" id="taskdescription" ng-model="modal.formData.description" placeholder="Enter description" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-3" for="users">Other members</label>
+            <oi-select
+                    class="col-sm-9" id="users"
+                    oi-options="item for item in modal.users"
+                    ng-model="modal.formData.userNames"
+                    multiple
+                    oi-select-options="{newItem: false}"
+                    placeholder="Select"
+            ></oi-select>
+        </div>
+
+    </form>
+
+</div>
+<div class="modal-footer">
+    <button type="submit" class="btn btn-info" ng-show="modal.edit" ng-click="modal.editTask()">Save</button>
+    <button type="submit" class="btn btn-info" ng-hide="modal.edit" ng-click="modal.addTask()">Create</button>
+    <button class="btn btn-default" ng-click="modal.cancel()">Cancel</button>
+</div>

@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    flex-flow: row nowrap;
+    font-family: 'Open Sans', sans-serif;
+}
+
+pre {
+    white-space: pre-wrap;
+    word-break: keep-all;
+}
+
+h1 {
+    margin-bottom: 40px;
+}
+
+.angular-google-map-container { height: 400px; }
+
+
+/* BEGIN - Side navigation bar style */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1031;
+    top: 0;
+    left: 0;
+    background-color: #232323;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    padding: 0px;
+    line-height: 24px;
+    font-size: 36px;
+    margin-left: 50px;
+    z-index: 1;
+    color: #000000;
+}
+
+.sidenav .sidemenu{
+    position: absolute;
+    top: 0px;
+    width: 230px;
+    right: 5px;
+}
+
+#main {
+    transition: margin-left .5s;
+    flex-grow: 1;
+    flex: 1;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.jumbotron{
+    margin-top: 20px;
+}
+/* END - Side navigation bar style */
+
+
+/* BEGIN - Delete Bootsrap navbar mobile collapse*/
+.navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+.navbar-header {
+    float: left;
+}
+
+.navbar-nav>li {
+    float: left;
+}
+
+.navbar-nav>li>a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-right {
+    float: right!important;
+    margin-right: -15px;
+}
+
+.navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.container-fluid {
+    max-width:1170px;
+}
+/* END - Delete Bootsrap navbar mobile collapse*/
+
+/* BEGIN : caledar style customization */
+.md-arrow svg{
+    display: inherit;
+}
+
+md-event-calendar md-event-calendar-month .md-event-calendar-month-row-header .md-event-calendar-month-cell-header {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.md-event-calendar-header-label {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.md-button {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                  not supported by any browser */
+    cursor: pointer;
+}
+
+.md-event-calendar-cell-event-time {
+    display: none;
+}
+
+md-event-calendar:not(._md) md-event-calendar-header {
+    border-color: #fff;
+}
+
+md-event-calendar:not(._md) md-event-calendar-month .md-event-calendar-month-row .md-event-calendar-month-cell-divider {
+    border-color: #fff;
+}
+
+md-event-calendar:not(._md) md-event-calendar-month .md-event-calendar-month-row-header {
+    border-color: #fff;
+}
+
+md-event-calendar:not(._md) md-event-calendar-month .md-event-calendar-month-row .md-event-calendar-month-cell:last-child {
+    border-color: #fff;
+}
+
+md-event-calendar:not(._md) md-event-calendar-month .md-event-calendar-month-row .md-event-calendar-month-cell {
+    border-color: #fff;
+    background-color: #f9f9f9;
+}
+
+md-event-calendar:not(._md) md-event-calendar-month .md-event-calendar-month-row {
+    border-color: #fff;
+}
+
+.md-event-calendar-cell-event {
+    background-color: #435b62 !important;
+    color: white !important;
+}
+
+
+/* END : caledar style customization */
+
+.brand {
+    display: block;
+    padding-left: 16px;
+    padding-bottom: 11px;
+    margin-top: 14px;
+    margin-bottom: 20px;
+    color: #c3c3c3;
+    font-size: large;
+    border: 0px;
+    border-bottom: 1px #818181;
+    border-style: dashed;
+}
+
+.projName {
+    display: inline-block;
+}
+
+.projName:hover {
+    cursor: pointer;
+}
+
+.projectList span {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 10px;
+    padding-left: 16px;
+    padding-bottom: 10px;
+    display: inline-block;
+    color: #69729a;
+}
+
+.projectList a {
+    padding: 2px 0px 2px 16px;
+    font-size: 16px;
+}
+
+.projectList a:focus {
+    outline: 0px;
+}
+
+.projectList a:hover {
+    background-color: #1b6d85;
+}
+
+.project-node div {
+    cursor: pointer;
+}
+
+.projectList a:hover > .modifyProject {
+    display: inline-block !important;
+}
+
+.newProject {
+    padding-left: 0px !important; ;
+    margin-left: 112px;
+}
+
+.newProject:hover {
+    color: white;
+}
+
+.modifyProject {
+    float: right;
+    margin-right: 10px;
+    margin-top: 3px !important;
+    padding: 0px !important;
+    color: white !important;
+    display: none !important;
+}
+
+.tooltip {
+    position: fixed;
+}
+
+.pointerCursor {
+    cursor: pointer;
+}
+.hidden-project {
+    display: none !important;
+}
+
+.hidden {
+    display: none !important;
+}

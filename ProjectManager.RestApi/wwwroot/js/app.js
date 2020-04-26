@@ -1,0 +1,1 @@
+var app = angular.module('projectmgrApp', ['ngRoute', 'ui.bootstrap' , 'ngAnimate', 'oi.select', 'material.components.eventCalendar']);
