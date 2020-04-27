@@ -124,6 +124,7 @@ h1 {
 
 .container-fluid {
     max-width:1170px;
+    margin-top: -2px;
 }
 /* END - Delete Bootsrap navbar mobile collapse*/
 

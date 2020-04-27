@@ -6,19 +6,22 @@
 <div class="modal-body">
 
     <form class="form-horizontal">
-        <div class="form-group">
-            <label class="control-label col-sm-3" for="startTime">Start time</label>
-            <div class="col-sm-3" uib-timepicker ng-model="modal.formData.startTime" id="startTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
+
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label class="control-label col-sm-6" for="startTime" style="padding-top: 40px;">Start time</label>
+                <div class="col-sm-6" uib-timepicker ng-model="modal.formData.startTime" id="startTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
+            </div>
+
+            <div class="form-group col-md-6">
+                <label class="control-label col-sm-6" for="endTime" style="padding-top: 40px;">End time</label>
+                <div class="col-sm-6" uib-timepicker ng-model="modal.formData.endTime" id="endTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
+            </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-sm-3" for="endTime">End time</label>
-            <div class="col-sm-3" uib-timepicker ng-model="modal.formData.endTime" id="endTime" hour-step="modal.hstep" minute-step="modal.mstep" show-meridian="modal.ismeridian"></div>
-        </div>
-
-        <div class="form-group">
-            <label class="control-label col-sm-3"  for="projdescription">Description</label>
-            <div class="col-sm-9">
+            <label class="control-label col-sm-3"  for="projdescription" style="padding-right: 20px;">Description</label>
+            <div class="col-sm-9" style="padding-left: 7px;">
                 <input type="text" class="form-control" id="projdescription" ng-model="modal.formData.description" placeholder="Enter description" />
             </div>
         </div>
